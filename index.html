@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test Project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script defer type="module" src="scripts/script.js"></script>
+  </head>
+  <body>
+    <!---------- NAVBAR ---------->
+    <nav id="nav">
+      <ul class="nav-link">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#campaign-ideas">Campaign Ideas</a></li>
+        <li><a href="#metric-measures ">Metric Measures</a></li>
+        <li><a href="#create-campaign ">Create Campaign </a></li>
+      </ul>
+      <div class="menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </nav>
+
+    <main>
+      <!---------- HOME PAGE ---------->
+      <section id="home">
+        <img src="./assets/home/logo.svg" class="logo" />
+        <article class="home-slogan">
+          <div>
+            <span>Make your</span>
+            <span>Brand <img src="./assets/home/home2.svg" /></span>
+            <span>Standout</span>
+          </div>
+        </article>
+        <img src="./assets/home/home1.svg" class="home-img" />
+        <h2 class="home-tagline">Unleash Your Brand's Power!</h2>
+
+        <div class="menu-container">
+          <i class="menu-open">
+            <span class="menu-bar"></span>
+          </i>
+        </div>
+
+        <div class="scroller">
+          <ul class="scroll-container"></ul>
+        </div>
+      </section>
+
+      <!---------- CAMPAIGN IDEAS PAGE ---------->
+      <section id="campaign-ideas">
+        <h1>Campaign Ideas</h1>
+        <article class="campaign-card">
+          <div class="rhombus">
+            <img class="campaign-img" alt="" />
+          </div>
+          <h2 class="campaign-title"></h2>
+        </article>
+        <a href="ideas.html" class="btn">Know more</a>
+      </section>
+
+      <!---------- METRIC MEASURES PAGE ---------->
+      <section id="metric-measures">
+        <h1>Metric<br />Measures</h1>
+        <div class="slider">
+          <div class="slider-wrapper"></div>
+          <button class="next-btn">
+            <i class="fa-solid fa-circle-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!----------  CREATE CAMPAIGN  ---------->
+      <section id="create-campaign">
+        <div class="create-camp-top">
+          <h1>Create Campaign</h1>
+          <div class="img-container">
+            <img src="./assets/createCamp/cc_1.svg" alt="" />
+            <img src="./assets/createCamp/cc_2.svg" alt="" />
+            <img src="./assets/createCamp/cc_3.svg" alt="" />
+          </div>
+        </div>
+        <div class="create-camp-bottom">
+          <ul class="create-camp-left">
+            <li>
+              <label for="campaignType">
+                <img src="./assets/createCamp/ccL_1.svg" alt="" />
+                <span>Select Campaign Type</span>
+              </label>
+              <input type="checkbox" id="campaignType" />
+            </li>
+
+            <li>
+              <label for="dataCollection">
+                <img src="./assets/createCamp/ccL_2.svg" alt="" />
+                <span>Select Data to be Collected</span>
+              </label>
+              <input type="checkbox" id="dataCollection" />
+            </li>
+
+            <li>
+              <label for="campaignDuration">
+                <img src="./assets/createCamp/ccL_3.svg" alt="" />
+                <span>Select Campaign Duration</span>
+              </label>
+              <input type="checkbox" id="campaignDuration" />
+            </li>
+
+            <li>
+              <label for="contact">
+                <img src="./assets/createCamp/ccL_4.svg" alt="" />
+                <span>Contact</span>
+              </label>
+              <input type="checkbox" id="contact" />
+            </li>
+
+            <li>
+              <label for="completed">
+                <img src="./assets/createCamp/ccL_5.svg" alt="" />
+                <span>Completed</span>
+              </label>
+              <input type="checkbox" id="completed" />
+            </li>
+          </ul>
+
+          <div class="create-camp-right">
+            <h2>Select Campaign Type</h2>
+            <div class="options-container">
+              <label class="option-card" for="op1">
+                <input type="checkbox" name="" id="op1" />
+                <img src="./assets/createCamp/ccR_1.svg" alt="" />
+                <h2>Impression</h2>
+              </label>
+              <label class="option-card" for="op2">
+                <input type="checkbox" name="" id="op2" />
+                <img src="./assets/createCamp/ccR_2.svg" alt="" />
+                <h2>Engagement</h2>
+              </label>
+              <label class="option-card" for="op3">
+                <input type="checkbox" name="" id="op3" />
+                <img src="./assets/createCamp/ccR_3.svg" alt="" />
+                <h2>Media</h2>
+              </label>
+              <label class="option-card" for="op4">
+                <input type="checkbox" name="" id="op4" />
+                <img src="./assets/createCamp/ccR_4.svg" alt="" />
+                <h2>Sales</h2>
+              </label>
+              <label class="option-card" for="op5">
+                <input type="checkbox" name="" id="op5" />
+                <img src="./assets/createCamp/ccR_5.svg" alt="" />
+                <h2>Brand</h2>
+              </label>
+              <label class="option-card" for="op6">
+                <input type="checkbox" name="" id="op6" />
+                <img src="./assets/createCamp/ccR_6.svg" alt="" />
+                <h2>Analytics</h2>
+              </label>
+            </div>
+            <a href="createCamp.html">Next</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!---------- FOOTER ---------->
+    <footer id="footer">
+      <div class="footer-content">
+        <img src="./assets/home/logoW.svg" alt="logo" />
+        <div class="contact">
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <span>vistaar@gmail.com</span>
+          </p>
+          <p>
+            <i class="fa-brands fa-solid fa-instagram"></i>
+            <span>vistaardigital</span>
+          </p>
+        </div>
+        <p class="address">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Paras Business Center, <br />Room 602, Borivali East</span>
+        </p>
+      </div>
+      <p class="copyright">
+        2018 &copy; Copyright Vistaar digital, All rigth reserved. Playtform by
+        vistardigital
+      </p>
+    </footer>
+  </body>
+</html>
