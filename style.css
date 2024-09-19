@@ -16,7 +16,7 @@
 }
 
 :root {
-  --body-font: 400 clamp(14px, 1.25vw + 8px, 30px) / 1 Kanit;
+  --body-font: 400 clamp(14px, 1.25vw + 8px, 24px) / 1 Kanit;
   --link-font: 600 1.1em/1 Kanit;
   --sub-head-font: 700 1.2em/1 Kanit;
   --head-font: 900 1.4em/1 Rubik;
@@ -80,7 +80,8 @@ li {
   list-style-type: none;
 }
 
-a {
+a,
+button {
   color: black;
   font: var(--link-font);
 }
@@ -114,7 +115,7 @@ article,
 .create-camp-bottom,
 .create-camp-left,
 .create-camp-right,
-.options-container,
+.right-content,
 .overlay,
 .option-card,
 .footer-content {
@@ -407,6 +408,7 @@ article {
 #ideas {
   flex-direction: column;
   gap: 2rem;
+  padding: 2em;
   background-color: snow;
 }
 
@@ -416,7 +418,6 @@ article {
 }
 
 #ideas article {
-  width: 100%;
   position: relative;
   gap: 2rem;
   padding: 1rem;
@@ -428,8 +429,9 @@ article .text {
 
 article .design {
   position: relative;
-  width: 40%;
+  width: 35%;
   background-color: purple;
+  border-radius: 0.5em;
 }
 
 article .design::before,
@@ -450,17 +452,13 @@ article .design::after {
   inset: auto -1rem -1rem auto;
 }
 
-article:nth-child(even) {
+article:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
 .design img {
   transform: scale(0.9);
   z-index: 10;
-}
-
-#article .text {
-  width: 50%;
 }
 
 .text h2 {
@@ -552,13 +550,13 @@ article:nth-child(even) {
   color: #9e04c5;
 }
 
-/* ---------- CREATE CAMPAIGN SUBPAGE ----------*/
+/* ---------- CREATE CAMPAIGN  ----------*/
 
-#create-campaign .create-camp-top {
+.create-camp-top {
   flex-direction: column;
+  padding: 2em;
+  gap: 4em;
   background: #f3cb3b;
-  gap: 3em;
-  padding-block: 1em;
 }
 
 .create-camp-top h1 {
@@ -571,40 +569,28 @@ article:nth-child(even) {
 }
 
 .img-container img {
-  width: 7em;
-  height: 7em;
+  width: 8em;
+  height: 8em;
 }
 
 .img-container img:nth-child(1) {
   position: absolute;
-  top: -3em;
-  left: 3.5em;
-}
-
-.img-container img:nth-child(2) {
-  padding-left: 2.5em;
-  padding-top: 1.5em;
-}
-
-.img-container img:nth-child(3) {
-  width: 9em;
-  height: 9em;
-  padding-right: 2em;
+  top: -4em;
+  left: 4.5em;
 }
 
 .create-camp-bottom {
-  justify-content: space-between;
-  gap: 1em;
   background: #4700ff;
   padding: 1em;
+  min-width: 75%;
+  gap: 2.5em;
 }
 
 .create-camp-bottom .create-camp-left,
 .create-camp-right {
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
   padding-block: 1em;
-  border-radius: 1em;
   border-radius: 1em;
 }
 
@@ -613,7 +599,7 @@ article:nth-child(even) {
 }
 
 .create-camp-left img {
-  width: 5em;
+  width: 4em;
 }
 
 .create-camp-left li {
@@ -641,6 +627,7 @@ article:nth-child(even) {
 
 .create-camp-left li input[type="checkbox"] {
   scale: 2;
+  pointer-events: none;
 }
 
 .create-camp-bottom .create-camp-right {
@@ -652,12 +639,12 @@ article:nth-child(even) {
   color: #4700ff;
 }
 
-.create-camp-right .options-container {
+.create-camp-right .right-content {
   flex-wrap: wrap;
   gap: 1em;
 }
 
-.options-container .option-card {
+.right-content .option-card {
   flex-direction: column;
   width: calc(30% - 1em);
   aspect-ratio: 1/1;
@@ -673,7 +660,7 @@ article:nth-child(even) {
 }
 
 .option-card h2 {
-  font-size: 0.6em;
+  font-size: 0.75em;
   text-align: center;
   color: black;
 }
@@ -686,10 +673,11 @@ input[type="checkbox"]:checked + img {
   box-shadow: 0 0 0 0.5em #3d159f70, 0 0 0 0.65em #4700ff;
 }
 
-.create-camp-right a {
+.create-camp-right .btn {
   background: #4700ff;
-  padding: 0.25em 1em;
-  border-radius: 0.2em;
+  width: 5em;
+  padding-block: 0.25em;
+  border-radius: 0.25em;
   color: white;
   font: var(--link-font);
   text-align: center;
@@ -697,21 +685,22 @@ input[type="checkbox"]:checked + img {
   transition: all 0.2s ease-in-out;
 }
 
-.create-camp-right a:hover {
-  scale: 1.2;
+.create-camp-right .btn:hover {
+  scale: 0.9;
 }
 
 .overlay {
-  height: 100dvh;
-  background: black;
+  position: fixed;
+  inset: 0 0;
+  z-index: 999;
+  background-color: black;
 }
 
 .clock {
-  width: 5em;
-  padding: 0.25em;
+  width: 4em;
+  padding: 0.2em;
   background: #f2dafb;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0.5em;
 }
@@ -719,19 +708,31 @@ input[type="checkbox"]:checked + img {
 .clock .caret-down {
   width: 0;
   height: 0;
-  border-left: 0.4em solid transparent;
-  border-right: 0.4em solid transparent;
+  border-inline: 0.4em solid transparent;
   border-top: 0.4em solid black;
 }
 
 .calendar {
-  width: 55%;
+  width: 50%;
 }
 
-input[type="date"],
-input[type="time"] {
+.clock,
+.calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#clock,
+#calendar {
   position: absolute;
+  flex-grow: 1;
   opacity: 0;
+}
+
+#calendar {
+  scale: 5;
+  right: 175%;
 }
 
 /* ---------- FOOTER ----------*/
