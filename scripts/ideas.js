@@ -11,7 +11,7 @@ document.querySelector(".ideas-container").innerHTML = ideas
           </p>
         </div>
         <div class="design">
-          <img src="${idea.image}" alt="" />
+          <img src="${idea.image}" loading="lazy" />
         </div>
       </article>`
   )

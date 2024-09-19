@@ -62,7 +62,7 @@ sliderWrapper.innerHTML = slideData
   .map(
     (slide) =>
       `<article class="slide">
-        <img src="${slide.imgSrc}" />
+        <img src="${slide.imgSrc}" loading="lazy"/>
         <h2>${slide.title}</h2>
         <p>${slide.description}</p>
      </article>`
@@ -95,13 +95,13 @@ updateActiveClass(curSlide, true);
 let currentStepIndex = 0;
 
 document.querySelector(".create-camp-left").innerHTML = `
-  <img src="./assets/createCamp/ccL_0.svg" alt="" />
+  <img src="./assets/createCamp/ccL_0.svg" loading="lazy" />
   ${stepsCheckboxData
     .map(
       (checkbox) => `
       <li>
         <label for="${checkbox.id}">
-          <img src="${checkbox.image}" alt="" />
+          <img src="${checkbox.image}" loading="lazy" />
           <span>${checkbox.label}</span>
         </label>
         <input type="checkbox" id="${checkbox.id}"
@@ -121,7 +121,7 @@ const contentRenderers = {
       .map(
         (c) => `
           <label class="option-card" for="${c.id}">
-          <img src="${c.imgSrc}"/>
+          <img src="${c.imgSrc}" loading="lazy"/>
           <h2>${c.title}</h2>
           <input type="checkbox" id="${c.id}" />
           </label>
@@ -143,7 +143,7 @@ const contentRenderers = {
         <input type="time" id="clock" />
       </label>
       <label for="calendar" class="calendar">
-        <img src="./assets/createCamp/calendar.svg" />
+        <img src="./assets/createCamp/calendar.svg" loading="lazy"/>
         <input type="date" id="calendar" />
       </label>
       <div class="btn-container">
